@@ -1,0 +1,11 @@
+<h1>这个是pageA</h1>
+<button class="routerToB">routerToB</button>
+<script>    
+    require(['jquery', 'text!../view/index/page-b.html'],function ($,b){
+        'use strict';
+        $('.routerToB').click(function (){
+            alert('去b')
+            $('#content').html(b)
+        })
+    })
+</script>
